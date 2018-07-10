@@ -29,9 +29,13 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-analytics.identify('1234', {
+};
+        analytics.identify('1234', {
             email: email, 
             name: fullname
+        });
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
