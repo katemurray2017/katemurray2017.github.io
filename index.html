@@ -29,6 +29,12 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-    <!--Placeholder for identify and track script -->
-</body> 
+analytics.identify('1234', {
+            email: email, 
+            name: fullname
+        });
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
+        });
+    </body> 
 </html>
